@@ -322,7 +322,7 @@ function draw() {
 var showWavesButton = document.getElementById('waves-button')
 showWavesButton.addEventListener('click', waveButtonHandler)
 function waveButtonHandler(){
-	console.log('here')
+	createPulses(pulses,source1)
 	startTime = new Date().getTime()
 }
 var showRaysCheckbox = document.getElementById('rays-checkbox')
