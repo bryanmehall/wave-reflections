@@ -135,7 +135,7 @@ function Source(posx, posy, signal) {
 		//calculate
 	var angleOffset = Math.PI * 2 / this.radialRes
 	
-	for (var i = 0; i < this.radialRes; i++) {
+	for (var i = 0; i < this.radialRes+1; i++) {
 		var angle = angleOffset * i,
 			vx = Math.cos(angle) * domain.speed,
 			vy = Math.sin(angle) * domain.speed;
