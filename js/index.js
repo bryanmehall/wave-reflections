@@ -1,3 +1,4 @@
+//This was written in 2014 code quality is bad
 var requestAnimationFrame =
 	window.requestAnimationFrame ||
 	window.webkitRequestAnimationFrame ||
