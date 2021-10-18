@@ -198,7 +198,7 @@ function Source(posx, posy, signal) {
 	}
 	this.drawRays = function(){
 		rays.clear()
-		for (var j=0; j<this.rayData.length; j+=2){
+		for (var j=1; j<this.rayData.length; j+=2){
 			var ray = this.rayData[j]
 			for (var i=1;i<ray.length; i++){
 				
@@ -322,7 +322,7 @@ function draw() {
 var showWavesButton = document.getElementById('waves-button')
 showWavesButton.addEventListener('click', waveButtonHandler)
 function waveButtonHandler(){
-	createPulses(pulses,source1)
+	console.log('here')
 	startTime = new Date().getTime()
 }
 var showRaysCheckbox = document.getElementById('rays-checkbox')
