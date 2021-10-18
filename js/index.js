@@ -306,9 +306,7 @@ var startTime = new Date().getTime();
 function draw() {
 	var now = new Date().getTime(),
 	time = (now-startTime)/1000
-	if (time<200){
-		animation = requestAnimationFrame(draw);
-	}
+	animation = requestAnimationFrame(draw);
 	waves.clear()
 	
 	stepPulses(time, pulses)
