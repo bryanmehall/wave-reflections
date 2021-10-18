@@ -88,7 +88,9 @@ var domain = {
 				handle.setAttribute('cx', controlPoint.x)
 				handle.setAttribute('cy', controlPoint.y)
 				source1 = new Source(sourceX,sourceY,1)
-				source1.drawRays()
+				if (showRaysCheckbox.checked){
+					source1.drawRays()
+				}
 					//source1.drawRays()
 				createPulses(pulses,source1)
 				drawBezier()
