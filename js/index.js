@@ -46,7 +46,7 @@ var source1;
 var pulse1;
 var animation;
 var pulses = []
-for (i=0; i<30; i++){
+for (var i=0; i<30; i++){
 	pulses.push({t:i/2, a:1})
 }
 
@@ -135,7 +135,7 @@ function Source(posx, posy, signal) {
 		//calculate
 	var angleOffset = Math.PI * 2 / this.radialRes
 	
-	for (i = 0; i < this.radialRes; i++) {
+	for (var i = 0; i < this.radialRes; i++) {
 		var angle = angleOffset * i,
 			vx = Math.cos(angle) * domain.speed,
 			vy = Math.sin(angle) * domain.speed;
@@ -144,7 +144,7 @@ function Source(posx, posy, signal) {
 		var sourcex = posx;
 		var sourcey = posy;
 		var ref = 0
-		for (r = 0; r < this.maxReflections; r++) {
+		for (var r = 0; r < this.maxReflections; r++) {
 			var prevRay = rayPath[r]
 			var line = {
 				p1: {
@@ -196,9 +196,9 @@ function Source(posx, posy, signal) {
 	}
 	this.drawRays = function(){
 		rays.clear()
-		for (j=0; j<this.rayData.length; j+=2){
+		for (var j=0; j<this.rayData.length; j+=2){
 			var ray = this.rayData[j]
-			for (i=1;i<ray.length; i++){
+			for (var i=1;i<ray.length; i++){
 				
 				rays.lineStyle(3,'0x00AA00',.1)
 				rays.moveTo(ray[i-1].x, ray[i-1].y)
