@@ -207,6 +207,9 @@ function Source(posx, posy, signal) {
 		}
 		stage.addChild(rays)
 	}
+	this.clearRays = function(){
+		rays.clear()
+	}
 }
 
 
@@ -313,6 +316,21 @@ function draw() {
 	//pulses[0].pulse.step(time)
 	
 	renderer.render(stage);
+}
+var showWavesButton = document.getElementById('waves-button')
+showWavesButton.addEventListener('click', waveButtonHandler)
+function waveButtonHandler(){
+	console.log('here')
+	startTime = new Date().getTime()
+}
+var showRaysCheckbox = document.getElementById('rays-checkbox')
+showRaysCheckbox.addEventListener('click', raysHandler)
+function raysHandler(){
+	if (showRaysCheckbox.checked){
+		source1.drawRays()
+	} else {
+		source1.clearRays()
+	}
 }
 draw()
 
